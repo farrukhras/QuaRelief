@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 List vid = [
   {
-    "name": "Yoga Video Link 1",
+    "name": "Yoga1 Video Link 1",
     "url": "https://www.youtube.com/watch?v=icfwMWYDeac",
   },
   {

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "459222846570",
+    "firebase_url": "https://qrelief-2b458.firebaseio.com",
+    "project_id": "qrelief-2b458",
+    "storage_bucket": "qrelief-2b458.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459222846570:android:4863121ec8bc4d43d34e13",
+        "android_client_info": {
+          "package_name": "com.example.health"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459222846570-0mjmqn6a7jfjit0obce4vac8bbehksmr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2HMLYJkcCaEZxETkTLKYujGCCmFoyPiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459222846570-0mjmqn6a7jfjit0obce4vac8bbehksmr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
