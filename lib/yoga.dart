@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health/chatscreen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 List vid = [
@@ -30,7 +31,7 @@ class Yoga extends StatelessWidget {
     var blockWidth = wTH / 100;
     return Material(
       child: DefaultTabController(
-        length: 2,
+        length: 3,
         child: Scaffold(
           appBar: AppBar(
             title: Center(
@@ -57,6 +58,15 @@ class Yoga extends StatelessWidget {
                 Tab(
                   child: Text(
                     "Text",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: blockWidth * 6,
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Text(
+                    "Chat",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: blockWidth * 6,
@@ -92,6 +102,9 @@ class Yoga extends StatelessWidget {
                   );
                 },
               ),
+              // CHAT VIEW
+              ChatScreen()
+              // CHAT VIEW END
             ],
           ),
         ),
