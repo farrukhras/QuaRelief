@@ -63,7 +63,7 @@ class ChatScreenState extends State<ChatScreen> {
           // initialData: initialData,
           builder: (context, snapshot) {
             if (!snapshot.hasData) {
-              return const Text('Loading...');
+              return const Text('Loading....');
             } else {
               return Container(
                 child: new Flexible(
