@@ -15,21 +15,61 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Handler(
-            img1: 'assets/yoga.jpg',
-            img2: 'assets/meditate.jpg',
-            t1: 'Yoga',
-            t2: 'Meditation',
-            url1: Yoga(),
-            url2: Mental(),
+            img1: 'assets/mental_health_1.png',
+            img2: 'assets/no_porn_1.png',
+            t1: 'MentalHealth',
+            t2: 'Pornography',
+            url1: Mental(),
+            url2: Yoga(),
           ),
           Handler(
-            img1: 'assets/dance.jpg',
-            img2: 'assets/books.jpg',
-            t1: 'Dance',
+            img1: 'assets/yoga_1.png',
+            img2: 'assets/books_1.png',
+            t1: 'Yoga',
             t2: 'Books',
-            url1: Dance(),
+            url1: Yoga(),
             url2: Books(),
           ),
+          Row(
+            // Pornography Hnadler
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Card(
+                color: Colors.brown[100],
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Dance(),
+                      ),
+                    );
+                  },
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: blockWidth * 32,
+                        width: blockWidth * 32,
+                        child: Image.asset(
+                          'assets/dance_1.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      SizedBox(
+                        height: blockWidth * 2,
+                      ),
+                      Text(
+                        'Dance',
+                        style: TextStyle(
+                          fontSize: blockWidth * 5.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
@@ -48,16 +88,16 @@ class Handler extends StatelessWidget {
     var wTH = MediaQuery.of(context).size.width;
     var blockWidth = wTH / 100;
     return Material(
-      color: Colors.brown[100],
+      color: Colors.brown[100], // changes row color
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(right: blockWidth * 2),
+            padding: EdgeInsets.only(right: blockWidth * 3),
             child: cHandler(img1, t1, url1),
           ),
           Padding(
-            padding: EdgeInsets.only(left: blockWidth * 2),
+            padding: EdgeInsets.only(left: blockWidth * 3),
             child: cHandler(img2, t2, url2),
           ),
         ],
@@ -71,6 +111,7 @@ Widget cHandler(img, tex, url) {
     var wTH = MediaQuery.of(context).size.width;
     var blockWidth = wTH / 100;
     return Card(
+      color: Colors.brown[100],
       child: InkWell(
         onTap: () {
           Navigator.push(
