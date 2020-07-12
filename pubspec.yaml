@@ -30,6 +30,7 @@ dependencies:
   url_launcher: ^5.5.0
   cloud_firestore: ^0.13.7
   # firebase_auth: ^0.16.1
+  hexcolor: ^1.0.4
 
 
 dev_dependencies:

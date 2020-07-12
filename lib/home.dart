@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health/books.dart';
 import 'package:health/dance.dart';
-import 'package:health/meditate.dart';
-import 'package:health/spirtual.dart';
+import 'package:health/mental.dart';
 import 'package:health/yoga.dart';
 
 class Home extends StatelessWidget {
@@ -21,7 +20,7 @@ class Home extends StatelessWidget {
             t1: 'Yoga',
             t2: 'Meditation',
             url1: Yoga(),
-            url2: Meditate(),
+            url2: Mental(),
           ),
           Handler(
             img1: 'assets/dance.jpg',
@@ -31,44 +30,6 @@ class Home extends StatelessWidget {
             url1: Dance(),
             url2: Books(),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Card(
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Spirtual(),
-                      ),
-                    );
-                  },
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        height: blockWidth * 32,
-                        width: blockWidth * 32,
-                        child: Image.asset(
-                          'assets/spirtual.jpg',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      SizedBox(
-                        height: blockWidth * 2,
-                      ),
-                      Text(
-                        'Spirtuality',
-                        style: TextStyle(
-                          fontSize: blockWidth * 5.5,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          )
         ],
       ),
     );

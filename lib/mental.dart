@@ -3,7 +3,7 @@ import 'package:health/chatscreen.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Books extends StatelessWidget {
+class Mental extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var wTH = MediaQuery.of(context).size.width;
@@ -18,7 +18,7 @@ class Books extends StatelessWidget {
                 Color(int.parse('#36ab9c'.replaceAll('#', '0xff'))),
             title: Center(
               child: Text(
-                'Books',
+                'Mental Health',
                 style: TextStyle(
                   fontSize: blockWidth * 7.5,
                   color: Colors.white,
@@ -62,7 +62,7 @@ class Books extends StatelessWidget {
             children: <Widget>[
               new StreamBuilder(
                   stream: Firestore.instance
-                      .collection("BooksYoutubeLinks")
+                      .collection("MentalHealthYoutube")
                       .snapshots(),
                   builder: (context, snapshot) {
                     if (!snapshot.hasData) {
@@ -74,7 +74,7 @@ class Books extends StatelessWidget {
                         itemCount: snapshot.data.documents.length,
                         itemBuilder: (context, index) {
                           // Map elem = snapshot.data.documents[index];
-                          return BooksSetup(
+                          return MentalSetup(
                             name: snapshot.data.documents[index]['name'],
                             url: snapshot.data.documents[index]['url'],
                           );
@@ -84,7 +84,7 @@ class Books extends StatelessWidget {
                   }),
               new StreamBuilder(
                   stream: Firestore.instance
-                      .collection("BooksArticleLinks")
+                      .collection("MentalHealthArticles")
                       .snapshots(),
                   builder: (context, snapshot) {
                     if (!snapshot.hasData) {
@@ -96,7 +96,7 @@ class Books extends StatelessWidget {
                         itemCount: snapshot.data.documents.length,
                         itemBuilder: (context, index) {
                           // Map elem = snapshot.data.documents[index];
-                          return BooksSetup(
+                          return MentalSetup(
                             name: snapshot.data.documents[index]['name'],
                             url: snapshot.data.documents[index]['url'],
                           );
@@ -105,7 +105,7 @@ class Books extends StatelessWidget {
                     }
                   }),
               // CHAT VIEW
-              ChatScreen(text: "BooksChat")
+              ChatScreen(text: "MentalChat")
               // CHAT VIEW END
             ],
           ),
@@ -115,9 +115,9 @@ class Books extends StatelessWidget {
   }
 }
 
-class BooksSetup extends StatelessWidget {
+class MentalSetup extends StatelessWidget {
   final name, url;
-  BooksSetup({Key key, this.name, this.url}) : super(key: key);
+  MentalSetup({Key key, this.name, this.url}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     var wTH = MediaQuery.of(context).size.width;
