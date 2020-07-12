@@ -36,7 +36,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
             color: Colors.white,
             child: Align(
                 alignment: Alignment(-blockWidth * 0.4, -blockHeight * 0.08),
-                child: Image.asset('assets/loading_screen.png',
+                child: Image.asset('assets/QuaRelief.png',
                     scale: blockWidth / 15))),
       ),
     );
