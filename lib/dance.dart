@@ -15,7 +15,7 @@ class Dance extends StatelessWidget {
           appBar: AppBar(
             // color:
             backgroundColor:
-                Color(int.parse('#36ab9c'.replaceAll('#', '0xff'))),
+                Color(int.parse('#345351'.replaceAll('#', '0xff'))),
             title: Center(
               child: Text(
                 'Dance',

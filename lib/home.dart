@@ -10,7 +10,8 @@ class Home extends StatelessWidget {
     var wTH = MediaQuery.of(context).size.width;
     var blockWidth = wTH / 100;
     return Material(
-      color: Colors.brown[100],
+      // color: Color(int.parse('#AEDDD7'.replaceAll('#', '0xff'))),
+      color: Colors.white,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
@@ -35,7 +36,8 @@ class Home extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Card(
-                color: Colors.brown[100],
+                color: Colors.white,
+                // color: Color(int.parse('#AEDDD7'.replaceAll('#', '0xff'))),
                 child: InkWell(
                   onTap: () {
                     Navigator.push(
@@ -88,7 +90,8 @@ class Handler extends StatelessWidget {
     var wTH = MediaQuery.of(context).size.width;
     var blockWidth = wTH / 100;
     return Material(
-      color: Colors.brown[100], // changes row color
+      color: Colors.white,
+      // color: Color(int.parse('#AEDDD7'.replaceAll('#', '0xff'))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -111,7 +114,8 @@ Widget cHandler(img, tex, url) {
     var wTH = MediaQuery.of(context).size.width;
     var blockWidth = wTH / 100;
     return Card(
-      color: Colors.brown[100],
+      color: Colors.white,
+      // color: Color(int.parse('#AEDDD7'.replaceAll('#', '0xff'))),
       child: InkWell(
         onTap: () {
           Navigator.push(
