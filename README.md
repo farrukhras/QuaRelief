@@ -9,15 +9,19 @@ Quarantine, self-isolation and social distancing, due to COVID'19, have taken a 
 - Anonymous Chat
 - Multiple Categories including Mental Health, Pornography etc
 
+## Technologies Used
+- Flutter
+- Firebase
+
 ## ScreenShots
 
 ![Loading Page](/Multimedia/Loading.jpeg)
 
 ![Homepage](/Multimedia/Homepage.jpeg)
 
-![Anonymous_Chat](/Multimedia/Anonymous_Chat.jpeg)
+![AnonymousChat](/Multimedia/AnonymousChat.jpeg)
 
 
-![Mental Health Articles](/Multimedia/Mental Health Articles.jpeg)
+![MentalHealthArticles](/Multimedia/MentalHealthArticles.jpeg)
 
-![Pornography Videos View](/Multimedia/Pornography Related Vidoes.jpeg)
+![PornographyVideosView](/Multimedia/PornographyRelatedVidoes.jpeg)
