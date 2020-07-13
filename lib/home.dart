@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:health/books.dart';
 import 'package:health/dance.dart';
 import 'package:health/mental.dart';
+import 'package:health/pornography.dart';
 import 'package:health/yoga.dart';
 
 class Home extends StatelessWidget {
@@ -21,7 +22,7 @@ class Home extends StatelessWidget {
             t1: 'MentalHealth',
             t2: 'Pornography',
             url1: Mental(),
-            url2: Yoga(),
+            url2: Pornography(),
           ),
           Handler(
             img1: 'assets/yoga_1.png',

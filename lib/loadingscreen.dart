@@ -35,7 +35,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
             width: blockWidth * 100,
             color: Colors.white,
             child: Align(
-                alignment: Alignment(-blockWidth * 0.4, -blockHeight * 0.08),
+                alignment: Alignment.center,
                 child: Image.asset('assets/QuaRelief.png',
                     scale: blockWidth / 15))),
       ),

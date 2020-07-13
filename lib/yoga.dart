@@ -134,7 +134,7 @@ class YogaSetup extends StatelessWidget {
                 name,
                 style: TextStyle(
                   fontSize: blockWidth * 4.5,
-                  color: Color(int.parse('#36ab9c'.replaceAll('#', '0xff'))),
+                  color: Color(int.parse('#345351'.replaceAll('#', '0xff'))),
                 ),
               ),
             ),

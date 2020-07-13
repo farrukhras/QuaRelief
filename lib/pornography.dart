@@ -3,7 +3,7 @@ import 'package:health/chatscreen.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Mental extends StatelessWidget {
+class Pornography extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var wTH = MediaQuery.of(context).size.width;
@@ -13,12 +13,11 @@ class Mental extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            // color:
             backgroundColor:
                 Color(int.parse('#345351'.replaceAll('#', '0xff'))),
             title: Center(
               child: Text(
-                'Mental Health',
+                'Pornography',
                 style: TextStyle(
                   fontSize: blockWidth * 7.5,
                   color: Colors.white,
@@ -30,7 +29,7 @@ class Mental extends StatelessWidget {
               tabs: <Widget>[
                 Tab(
                   child: Text(
-                    "Video",
+                    "Videos",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: blockWidth * 6,
@@ -62,7 +61,7 @@ class Mental extends StatelessWidget {
             children: <Widget>[
               new StreamBuilder(
                   stream: Firestore.instance
-                      .collection("MentalHealthYoutube")
+                      .collection("PornographyYoutubeLinks")
                       .snapshots(),
                   builder: (context, snapshot) {
                     if (!snapshot.hasData) {
@@ -74,7 +73,7 @@ class Mental extends StatelessWidget {
                         itemCount: snapshot.data.documents.length,
                         itemBuilder: (context, index) {
                           // Map elem = snapshot.data.documents[index];
-                          return MentalSetup(
+                          return PornographySetup(
                             name: snapshot.data.documents[index]['name'],
                             url: snapshot.data.documents[index]['url'],
                           );
@@ -84,7 +83,7 @@ class Mental extends StatelessWidget {
                   }),
               new StreamBuilder(
                   stream: Firestore.instance
-                      .collection("MentalHealthArticles")
+                      .collection("PornographyArticlesLinks")
                       .snapshots(),
                   builder: (context, snapshot) {
                     if (!snapshot.hasData) {
@@ -96,7 +95,7 @@ class Mental extends StatelessWidget {
                         itemCount: snapshot.data.documents.length,
                         itemBuilder: (context, index) {
                           // Map elem = snapshot.data.documents[index];
-                          return MentalSetup(
+                          return PornographySetup(
                             name: snapshot.data.documents[index]['name'],
                             url: snapshot.data.documents[index]['url'],
                           );
@@ -105,7 +104,7 @@ class Mental extends StatelessWidget {
                     }
                   }),
               // CHAT VIEW
-              ChatScreen(text: "MentalChat")
+              ChatScreen(text: "PornographyChat")
               // CHAT VIEW END
             ],
           ),
@@ -115,9 +114,9 @@ class Mental extends StatelessWidget {
   }
 }
 
-class MentalSetup extends StatelessWidget {
+class PornographySetup extends StatelessWidget {
   final name, url;
-  MentalSetup({Key key, this.name, this.url}) : super(key: key);
+  PornographySetup({Key key, this.name, this.url}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     var wTH = MediaQuery.of(context).size.width;
