@@ -30,7 +30,7 @@ class Yoga extends StatelessWidget {
               tabs: <Widget>[
                 Tab(
                   child: Text(
-                    "Video",
+                    "Videos",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: blockWidth * 6,
